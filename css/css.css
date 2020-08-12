@@ -1,0 +1,662 @@
+/* common styles !!!YOU DON'T NEED THEM  */
+
+.container {
+  width: 550px;
+  margin: 50px auto 0px auto;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+h1 span {
+  font-family: 'Kaushan Script', cursive;
+  color: #A42CD6;
+}
+
+.submenu {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  margin: 10px auto 0;
+}
+
+.submenu__item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.submenu__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.submenu__item a {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  font-size: 17px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.submenu__item a:hover {
+  color: #A42CD6;
+}
+
+.submenu__item a i {
+  color: #A42CD6;
+  margin-right: 5px;
+}
+
+.content-block {
+  margin-top: 50px;
+}
+
+.content-block h2 {
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.content-block__effect {
+  margin-bottom: 50px;
+}
+
+.progress-container {
+  margin-bottom: 30px;
+}
+
+.play-animation {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  padding: 5px 15px;
+  margin: auto;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: 2px solid #1c1c1c;
+  border-radius: 4px;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.play-animation:hover {
+  color: #fff;
+  background-color: #1c1c1c;
+}
+
+/* progress bar styles !!!YOU NEED THEM */
+
+.progress-container {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: column;
+  -webkit-box-align: start;
+  align-items: flex-start;
+}
+
+.progress-bar {
+  position: relative;
+  width: 550px;
+  box-sizing: border-box;
+}
+
+.progress-bar:not(:last-child) {
+  margin-bottom: 35px;
+}
+
+.progress-bar--lg-offset:not(:last-child) {
+  margin-bottom: 52.5px;
+}
+
+.progress-bar__bar, .progress-bar__bar-inner, .progress-bar__value, .progress-bar__skill {
+  box-sizing: border-box;
+}
+
+.progress-bar__bar {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar__bar--no-overflow {
+  overflow: visible;
+}
+
+.progress-bar__bar-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.progress-bar__bar-inner.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: cubic-bezier(0.1, 1.14, 0.31, 1.06);
+  transition-timing-function: cubic-bezier(0.1, 1.14, 0.31, 1.06);
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.progress-bar__skill, .progress-bar__value {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.progress-bar__value--aligned-value {
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+/* progress bar #1 styles */
+
+.progress-bar--1 {
+  height: 20px;
+  padding: 4px;
+  border: 1px solid #dddddd;
+  border-radius: 20px;
+}
+
+.progress-bar__bar-inner--1 {
+  background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #00BFB3), to(#037971));
+  background-image: linear-gradient(to right, #00BFB3 0, #037971 100%);
+  background-size: 200%;
+  background-position: 0 0;
+  border-radius: 20px;
+}
+
+.progress-bar__skill--1 {
+  position: absolute;
+  top: -27px;
+  left: -20px;
+  opacity: 0;
+}
+
+.progress-bar__skill--1.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  left: 0;
+  opacity: 1;
+}
+
+.progress-bar__value--1 {
+  position: absolute;
+  top: -27px;
+  right: -20px;
+  opacity: 0;
+}
+
+.progress-bar__value--1.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  right: 0;
+  opacity: 1;
+}
+
+/* progress bar #2 styles */
+
+.progress-bar--2 {
+  height: 20px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+@-webkit-keyframes progress-2-bg-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 42px 0;
+  }
+}
+
+@keyframes progress-2-bg-animation {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 0, 42px 0;
+  }
+}
+
+.progress-bar__bar-inner--2 {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.2)), linear-gradient(135deg, #5EEB5B, #5EEB5B 33%, #358600 33%, #358600 66%, #5EEB5B 66%);
+  background-size: 100% 100%, 42px 100%;
+  background-position: 0 0, 0 0;
+  border-radius: 3px;
+}
+
+.progress-bar__bar-inner--2.js-animated {
+  -webkit-animation: progress-2-bg-animation 1.5s linear 0s infinite;
+  animation: progress-2-bg-animation 1.5s linear 0s infinite;
+}
+
+.progress-bar__skill--2 {
+  position: absolute;
+  top: -33px;
+  left: 0;
+  opacity: 0;
+}
+
+.progress-bar__skill--2.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  top: -23px;
+  opacity: 1;
+}
+
+.progress-bar__value--2 {
+  position: absolute;
+  top: -33px;
+  right: 0;
+  opacity: 0;
+}
+
+.progress-bar__value--2.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  top: -23px;
+  opacity: 1;
+}
+
+/* progress bar #3 styles */
+
+.progress-bar--4 {
+  height: 5px;
+  background-color: #efefef;
+}
+
+.progress-bar--4:nth-child(1) .progress-bar__bar-inner, .progress-bar--4:nth-child(1) .progress-bar__value {
+  background-color: #F40076;
+}
+
+.progress-bar--4:nth-child(1) .progress-bar__bar-inner:after, .progress-bar--4:nth-child(1) .progress-bar__value:after {
+  border-top-color: #F40076;
+}
+
+.progress-bar--4:nth-child(2) .progress-bar__bar-inner, .progress-bar--4:nth-child(2) .progress-bar__value {
+  background-color: #1A936F;
+}
+
+.progress-bar--4:nth-child(2) .progress-bar__bar-inner:after, .progress-bar--4:nth-child(2) .progress-bar__value:after {
+  border-top-color: #1A936F;
+}
+
+.progress-bar--4:nth-child(3) .progress-bar__bar-inner, .progress-bar--4:nth-child(3) .progress-bar__value {
+  background-color: #2274A5;
+}
+
+.progress-bar--4:nth-child(3) .progress-bar__bar-inner:after, .progress-bar--4:nth-child(3) .progress-bar__value:after {
+  border-top-color: #2274A5;
+}
+
+.progress-bar--4:nth-child(4) .progress-bar__bar-inner, .progress-bar--4:nth-child(4) .progress-bar__value {
+  background-color: #2274A5;
+}
+
+.progress-bar--4:nth-child(4) .progress-bar__bar-inner:after, .progress-bar--4:nth-child(4) .progress-bar__value:after {
+  border-top-color: #2274A5;
+}
+
+.progress-bar__skill--3 {
+  position: absolute;
+  top: -24px;
+  left: -20px;
+  opacity: 0;
+}
+
+.progress-bar__skill--3.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  left: 0;
+  opacity: 1;
+}
+
+.progress-bar__value--3 {
+  position: absolute;
+  top: -43px;
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: 10px;
+  color: #fff;
+  opacity: 0;
+}
+
+.progress-bar__value--3:after {
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  content: '';
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top: 5px solid;
+}
+
+.progress-bar__value--3.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+  top: -33px;
+  opacity: 1;
+}
+
+/* progress bar #4 styles */
+
+.progress-bar--4 {
+  height: 3px;
+  background-color: #efefef;
+}
+
+.progress-bar__bar-inner--4 {
+  background-color: #000;
+}
+
+.progress-bar__bar-inner--4:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: block;
+  width: 8px;
+  height: 8px;
+  content: '';
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.progress-bar__value--4 {
+  position: absolute;
+  top: -22px;
+  font-size: 10px;
+  opacity: 0;
+}
+
+.progress-bar__value--4.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+
+.progress-bar__skill--4 {
+  position: absolute;
+  top: -22px;
+  left: -20px;
+  opacity: 0;
+}
+
+.progress-bar__skill--4.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  left: 0;
+  opacity: 1;
+}
+
+/* progress bar #5 styles */
+
+.progress-bar--5 {
+  height: 30px;
+  background-color: #dadada;
+}
+
+.progress-bar--5:nth-child(1) .progress-bar__bar-inner {
+  background-color: #551A8B;
+}
+
+.progress-bar--5:nth-child(2) .progress-bar__bar-inner {
+  background-color: #AB82FF;
+}
+
+.progress-bar--5:nth-child(3) .progress-bar__bar-inner {
+  background-color: #7D26CD;
+}
+
+.progress-bar--5:nth-child(4) .progress-bar__bar-inner {
+  background-color: #c294fd;
+}
+
+.progress-bar__skill--5 {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  color: #fff;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity: 0;
+}
+
+.progress-bar__skill--5.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0s;
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+.progress-bar__value--5 {
+  position: absolute;
+  top: 50%;
+  color: #fff;
+  -webkit-transform: translateX(-100%) translateX(-10px) translateY(-50%);
+  transform: translateX(-100%) translateX(-10px) translateY(-50%);
+  opacity: 0;
+  z-index: 10;
+}
+
+.progress-bar__value--5.js-animated {
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transition-delay: 0.45s;
+  transition-delay: 0.45s;
+  opacity: 1;
+}
+
+.ba {
+  width: 30rem;
+}
+
+.font {
+  color: #000000;
+}
+
+a.logo {
+  font-size: 20px;
+  color: #f2f2f2;
+  float: left;
+  margin-top: 15px;
+  text-transform: uppercase;
+}
+
+a.logo b {
+  font-weight: 900;
+}
+
+a.logo:hover, a.logo:focus {
+  text-decoration: none;
+  outline: none;
+}
+
+a.logo span {
+  color: #4ECDC4;
+}
+
+/*Calender*/
+
+
+
+#calendar {
+  margin-left: auto;
+  margin-right: auto;
+  width: 320px;
+  font-family: 'Lato', sans-serif;
+}
+
+#calendar_weekdays div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#calendar_content, #calendar_weekdays, #calendar_header {
+  position: relative;
+  width: 320px;
+  overflow: hidden;
+  float: left;
+  z-index: 10;
+}
+
+#calendar_weekdays div, #calendar_content div {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #FFFFFF;
+  color: #787878;
+}
+
+#calendar_content {
+  -webkit-border-radius: 0px 0px 12px 12px;
+  -moz-border-radius: 0px 0px 12px 12px;
+  border-radius: 0px 0px 12px 12px;
+}
+
+#calendar_content div {
+  float: left;
+}
+
+#calendar_content div:hover {
+  background-color: #F8F8F8;
+}
+
+#calendar_content div.blank {
+  background-color: #E8E8E8;
+}
+
+#calendar_header, #calendar_content div.today {
+  zoom: 1;
+  filter: alpha(opacity=70);
+  opacity: 0.7;
+}
+
+#calendar_content div.today {
+  color: #FFFFFF;
+}
+
+#calendar_header {
+  width: 100%;
+  height: 37px;
+  text-align: center;
+  background-color: #FF6860;
+  padding: 18px 0;
+  -webkit-border-radius: 12px 12px 0px 0px;
+  -moz-border-radius: 12px 12px 0px 0px;
+  border-radius: 12px 12px 0px 0px;
+}
+
+#calendar_header h1 {
+  font-size: 1.5em;
+  color: #FFFFFF;
+  float: left;
+  width: 70%;
+}
+
+i[class^=icon-chevron] {
+  color: #FFFFFF;
+  float: left;
+  width: 15%;
+  border-radius: 50%;
+}

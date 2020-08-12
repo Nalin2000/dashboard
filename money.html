@@ -1,0 +1,417 @@
+<!--Dashboard-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | Admin</title>
+    <!--icon-->
+    <link rel="icon" type="image/png" href="login/images/icons/favicon.ico" />
+    <!-- Google Font: Source Sans Pro -->
+    <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <!-- Font Awesome ใช้เป็น link เราได้-->
+    <link rel="stylesheet" href="pulgins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="css/adminlte.min.css">
+    <link rel="stylesheet" href="css/css.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/apps.css">
+
+    <!-- Ionicons -->
+
+</head>
+
+<body class="hold-transition sidebar-mini layout-navbar-fixed">
+    <!--div warper-->
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                        <i class="fas fa-th-large"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-warning elevation-4">
+            <!-- Brand Logo -->
+            <a href="dashboard.html" class="brand-link logo">
+                <img src="image/N.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+                    style="opacity: .8">
+                <b> &nbsp; MINI<span>ME</span></b></a>
+            </a>
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar user panel (optional) -->
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="image/me.jpg" class="w-10 img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="#" class="d-block">Nalin Say.</a>
+                    </div>
+                </div>
+                <!-- Sidebar Menu -->
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
+                        data-accordion="false">
+                        <li class="nav-item">
+                            <a href="dashboard.html" class="nav-link ">
+                                <i class="nav-icon fas fa-chart-line"></i>
+                                <p>
+                                    Dashboard
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="user.html" class="nav-link">
+                                <i class="nav-icon fas fa-user"></i>
+                                <p>
+                                    User Profile
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="money.html" class="nav-link active">
+                                <i class="nav-icon fas fa-hand-holding-usd"></i>
+                                <p>
+                                    Finance
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">
+                                <p>
+                                    Logout
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+
+            <!-- /.content-header -->
+            <!-- Main content -->
+            <div class="content">
+                <div class="container-fluid">
+
+                    <!-- AREA CHART -->
+                    <div class="card ch">
+                        <div class="card-header">
+                            <h3 class="card-title">Finance</h3>
+
+                            <div class="card-tools">
+                                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- /.card -->
+                        <div class="card-body">
+                            <div class="chart">
+                                <canvas id="areaChart"
+                                    style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-xxl-5 d-flex">
+                            <div class="w-100">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-4">Shop</h5>
+                                                <h1 class="display-5 mt-1 mb-3">1,250฿</h1>
+                                                <div class="mb-1">
+                                                    <span class="text-danger"> <i
+                                                            class="mdi mdi-arrow-bottom-right"></i> -10% </span>
+                                                    <span class="text-muted">Since last week</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-4">Visitors</h5>
+                                                <h1 class="display-5 mt-1 mb-3">20.1</h1>
+                                                <div class="mb-1">
+                                                    <span class="text-success"> <i
+                                                            class="mdi mdi-arrow-bottom-right"></i> 3.21% </span>
+                                                    <span class="text-muted">Since last week</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-4">balance</h5>
+                                                <h1 class="display-5 mt-1 mb-3">2,573.25฿</h1>
+                                                <div class="mb-1">
+                                                    <span class="text-success"> <i
+                                                            class="mdi mdi-arrow-bottom-right"></i></span>
+                                                    <span class="text-muted">This Day</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h5 class="card-title mb-4">Orders</h5>
+                                                <h1 class="display-5 mt-1 mb-3">64</h1>
+                                                <div class="mb-1">
+                                                    <span class="text-danger"> <i
+                                                            class="mdi mdi-arrow-bottom-right"></i> -2.25% </span>
+                                                    <span class="text-muted">Since last week</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="contrain">
+
+                                    <div class="card-footer">
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-6">
+                                                <div class="description-block border-right">
+                                                    <span class="description-percentage text-blue"><i
+                                                            class="fas fa-dollar-sign"></i> USD</span>
+                                                    <h5 class="description-header">31.2828฿</h5>
+                                                    <span class="description-text">AMERICA</span>
+                                                </div>
+                                                <!-- /.description-block -->
+                                            </div>
+                                            <!-- /.col -->
+                                            <div class="col-sm-3 col-6">
+                                                <div class="description-block border-right">
+                                                    <span class="description-percentage text-danger"><i
+                                                            class="fas fa-pound-sign"></i> GBP</span>
+                                                    <h5 class="description-header">41.1314฿</h5>
+                                                    <span class="description-text">ENGLAND</span>
+                                                </div>
+                                                <!-- /.description-block -->
+                                            </div>
+                                            <!-- /.col -->
+                                            <div class="col-sm-3 col-6">
+                                                <div class="description-block border-right">
+                                                    <span class="description-percentage text-success"><i
+                                                            class="fas fa-yen-sign"></i> JPY</span>
+                                                    <h5 class="description-header">29.7179฿</h5>
+                                                    <span class="description-text">JAPAN</span>
+                                                </div>
+                                                <!-- /.description-block -->
+                                            </div>
+                                            <!-- /.col -->
+                                            <div class="col-sm-3 col-6">
+                                                <div class="description-block">
+                                                    <span class="description-percentage text-danger"><i
+                                                            class="fas fa-won-sign"></i> KRW</span>
+                                                    <h5 class="description-header">0.0264฿</h5>
+                                                    <span class="description-text">KOREA</span>
+                                                </div>
+                                                <!-- /.description-block -->
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-xxl-7">
+                            <div class="card card-success flex-fill w-100">
+                                <!-- PIE CHART -->
+                                <div class="card-header">
+                                    <h3 class="card-title">สัดส่วนการใช้จ่าย</h3>
+
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="chart chart-sm">
+                                        <canvas id="chartjs-pie"></canvas>
+                                    </div>
+                                </div>
+
+                                <!-- /.card-body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.content -->
+            </div>
+            <!-- /.content-wrapper -->
+            <!-- Control Sidebar -->
+            <aside class="control-sidebar control-sidebar-animate ba">
+                <h3> Calender</h3>
+                <div id="calendar">
+                    <div id="calendar_header"><i class="icon-chevron-left"></i>
+                        <h1></h1><i class="icon-chevron-right"></i>
+                    </div>
+                    <div id="calendar_weekdays"></div>
+                    <div id="calendar_content"></div>
+                </div>
+
+
+            </aside>
+        </div>
+        <!-- /.control-sidebar -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <!-- To the right -->
+            <div class="float-right d-none d-sm-inline">
+                Anything you want
+            </div>
+            <!-- Default to the left -->
+            <strong>Copyright &copy; 2020 <a href="https://adminlte.io">Nalin.S</a>.</strong> All rights
+            reserved.
+        </footer>
+    </div>
+    <!--/div warper-->
+
+
+
+
+
+</body>
+<!-- jQuery -->
+<script src="js/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="js/adminlte.min.js"></script>
+<!-- ChartJS -->
+<script src="js/chart.js/Chart.min.js"></script>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'>
+</script>
+<script src="js/script.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $(function () {
+        //--------------
+        //- AREA CHART -
+        //--------------
+        var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
+
+        var areaChartData = {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [
+                {
+                    label: 'Expense',
+                    backgroundColor: 'rgba(255,255,255,0.7)',
+                    borderColor: 'rgba(255,255,255,0.7)',
+                    pointRadius: true,
+                    pointColor: 'rgba(255,255,255,1)',
+                    pointStrokeColor: 'rgba(255,255,255,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(60,141,188,1)',
+
+                    data: [5320, 4120, 6500, 4900.10, 3200.2, 10551.81, 5700, 3159, 100]
+                },
+                {
+                    label: 'Income',
+                    backgroundColor: '#33CC99',
+                    borderColor: '#33CC99',
+                    pointRadius: true,
+                    pointColor: 'rgba(255,255,255,1)',
+                    pointStrokeColor: 'rgba(255,255,255,1)',
+                    pointHighlightFill: '#fff',
+                    pointHighlightStroke: 'rgba(220,220,220,1)',
+                    data: [6000, 6000, 5000, 7500, 6000, 6500, 10000, 7200, 500]
+                },
+
+            ]
+        }
+
+        var areaChartOptions = {
+            maintainAspectRatio: false,
+            responsive: true,
+            legend: {
+                display: true
+            },
+            scales: {
+                xAxes: [{
+                    gridLines: {
+                        display: true,
+                    }
+                }],
+                yAxes: [{
+                    gridLines: {
+                        display: true,
+                    }
+                }]
+            }
+        }
+
+        // This will get the first returned node in the jQuery collection.
+        var areaChart = new Chart(areaChartCanvas, {
+            type: 'line',
+            data: areaChartData,
+            options: areaChartOptions
+        })
+
+    })
+
+</script>
+<script>
+    $(function () {
+        // Pie chart
+        new Chart(document.getElementById("chartjs-pie"), {
+            type: "pie",
+            data: {
+                labels: ["ของกิน", "ของใช้", "ค่าบ้าน", "อื่นๆ"],
+                datasets: [{
+                    data: [50, 20, 30, 10],
+                    backgroundColor: [
+                        window.theme.primary,
+                        window.theme.warning,
+                        window.theme.danger,
+                        "#dee2e6"
+                    ],
+                    borderColor: "transparent"
+                }]
+            },
+            options: {
+                maintainAspectRatio: true,
+                legend: {
+                    display: true
+                }
+            }
+        });
+    });
+</script>
+
+</html>
